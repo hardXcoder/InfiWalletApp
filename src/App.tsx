@@ -30,10 +30,18 @@ const theme = createTheme({
   },
 });
 
+// It was from env
+const network = "mainnet-beta" as WalletAdapterNetwork;
+// It was from env
+const rpcHost = "https://api.mainnet-beta.solana.com";
+
+const connection = new anchor.web3.Connection(rpcHost);
+
 const getCandyMachineId = (): anchor.web3.PublicKey | undefined => {
   try {
+    // It was from env
     const candyMachineId = new anchor.web3.PublicKey(
-      process.env.REACT_APP_CANDY_MACHINE_ID!
+      "6J6cXTGbXRg1F9GtbbL8PKoDB7suqMFUhtSP7PavKuER"
     );
 
     return candyMachineId;
@@ -44,11 +52,7 @@ const getCandyMachineId = (): anchor.web3.PublicKey | undefined => {
 };
 
 const candyMachineId = getCandyMachineId();
-const network = process.env.REACT_APP_SOLANA_NETWORK as WalletAdapterNetwork;
-const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!;
-const connection = new anchor.web3.Connection(rpcHost);
 
-const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 const txTimeoutInMilliseconds = 30000;
 
 const App = () => {
@@ -91,7 +95,6 @@ const App = () => {
               <Home
                 candyMachineId={candyMachineId}
                 connection={connection}
-                startDate={startDateSeed}
                 txTimeout={txTimeoutInMilliseconds}
                 rpcHost={rpcHost}
               />
