@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fb7dfd2c.chunk.css",
+    "main.js": "/static/js/main.b57850f9.chunk.js",
+    "main.js.map": "/static/js/main.b57850f9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c3808eae.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c3808eae.js.map",
+    "static/js/2.5736693d.chunk.js": "/static/js/2.5736693d.chunk.js",
+    "static/js/2.5736693d.chunk.js.map": "/static/js/2.5736693d.chunk.js.map",
+    "static/js/3.e3cab27b.chunk.js": "/static/js/3.e3cab27b.chunk.js",
+    "static/js/3.e3cab27b.chunk.js.map": "/static/js/3.e3cab27b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.fb7dfd2c.chunk.css.map": "/static/css/main.fb7dfd2c.chunk.css.map",
+    "static/js/2.5736693d.chunk.js.LICENSE.txt": "/static/js/2.5736693d.chunk.js.LICENSE.txt",
+    "static/media/degoddess.290750d0.gif": "/static/media/degoddess.290750d0.gif",
+    "static/media/degoddess2.e3d792fe.gif": "/static/media/degoddess2.e3d792fe.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3808eae.js",
+    "static/js/2.5736693d.chunk.js",
+    "static/css/main.fb7dfd2c.chunk.css",
+    "static/js/main.b57850f9.chunk.js"
+  ]
+}
