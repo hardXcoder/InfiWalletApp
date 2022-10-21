@@ -42,7 +42,11 @@ const Navbar = () => {
       {/* <img src={logo} /> */}
       <h3 className="logo">InfinityWallet</h3>
 
-      {wallet.connected ? <h4>{wallet.publicKey?.toBase58()}</h4> : <></>}
+      {wallet.connected ? (
+        <h4 className="addressBar">{wallet.publicKey?.toBase58()}</h4>
+      ) : (
+        <></>
+      )}
       {!wallet.connected ? (
         <ConnectButton onClick={onClick} className="navConnectBtn">
           <b>Connect Wallet</b>

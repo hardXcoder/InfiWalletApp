@@ -156,6 +156,28 @@ a {
   );
 }
 
+.createWalletButton {
+  width: 20%;
+  height: 60px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    89.46deg,
+    #5362e9 9.25%,
+    #5362e9 51.1%,
+    #b127c8 92.85%
+  );
+
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+}
+
+.addressBar {
+  border: 1px solid grey;
+  padding: 0.5rem;
+}
+
 @media screen and (max-width: 500px) {
   .homeContainer {
     min-height: calc(100vh - 12vh - 15vh);

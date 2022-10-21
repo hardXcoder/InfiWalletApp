@@ -175,6 +175,12 @@ const Home = (props: HomeProps) => {
         <h1>Create multisig wallet !</h1>
       </div>
 
+      <MintButton
+        candyMachine={candyMachine}
+        isMinting={isUserMinting}
+        onMint={onMint}
+      />
+
       {/* <div className="mintContainer">
         <img className="raffleImage" src={raffleImage} alt="raffleSpin" />
 
