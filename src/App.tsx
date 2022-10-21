@@ -75,21 +75,6 @@ const App = () => {
         <WalletProvider wallets={wallets} autoConnect>
           <WalletDialogProvider>
             <div className="backgroundPaper">
-              {/* <div className="Landing_marquee__rdSvL">
-                <div className="Landing_track__NkqOI"></div>
-                <div className="flex gap-4 items-center z-20">
-                  <span>jedbvjheksnc</span>
-                </div>
-                <div className="flex gap-4 items-center z-20">
-                  <span>jedbvjheksnc</span>
-                </div>
-                <div className="flex gap-4 items-center z-20">
-                  <span>jedbvjheksnc</span>
-                </div>
-                <div className="flex gap-4 items-center z-20">
-                  <span>jedbvjheksnc</span>
-                </div>
-              </div> */}
               <Navbar />
 
               <Home
