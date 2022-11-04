@@ -19,7 +19,7 @@ import { AlertState } from "../utils";
 import { Header } from "../Header";
 import { MintButton } from "../MintButton";
 import { GatewayProvider } from "@civic/solana-gateway-react";
-
+import { Button } from "@solana/wallet-adapter-react-ui/lib/Button";
 import raffleImage from "../img/raffle.png";
 
 const ConnectButton = styled(WalletDialogButton)`
@@ -173,6 +173,7 @@ const Home = (props: HomeProps) => {
     <div className="homeContainer">
       <div className="typewriter">
         <h1>Create multisig wallet !</h1>
+        <Button >Create Multigis Wallet</Button>
       </div>
 
       {/* <div className="mintContainer">

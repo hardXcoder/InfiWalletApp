@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { useEffect, useMemo, useState, useCallback } from "react";
 import * as anchor from "@project-serum/anchor";
-
+import { WalletMultiButton } from "@solana/wallet-adapter-material-ui";
 import styled from "styled-components";
 
 import logo from "../img/logo.png";
@@ -13,11 +13,13 @@ const ConnectButton = styled(WalletDialogButton)``;
 
 const Navbar = () => {
   const wallet = useWallet();
-
-  const [isConnected, setIsConnected] = useState(false);
-
-  const onClick = async () => {
-    setIsConnected(!isConnected);
+  const { publicKey } = wallet;
+  const WalletConnection = () => {
+    return (
+      <div className="button-container">
+        <WalletMultiButton className="cta-button connect-wallet-button" />
+      </div>
+    );
   };
 
   const anchorWallet = useMemo(() => {
@@ -39,19 +41,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      {/* <img src={logo} /> */}
       <h3 className="logo">InfinityWallet</h3>
 
-      {wallet.connected ? <h4>{wallet.publicKey?.toBase58()}</h4> : <></>}
-      {!wallet.connected ? (
-        <ConnectButton onClick={onClick} className="navConnectBtn">
-          <b>Connect Wallet</b>
-        </ConnectButton>
-      ) : (
-        <ConnectButton onClick={onClick} className="navConnectBtn">
-          <b>Disconnect Wallet</b>
-        </ConnectButton>
-      )}
+      {WalletConnection()}
     </nav>
   );
 };
