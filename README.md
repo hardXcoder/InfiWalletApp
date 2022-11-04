@@ -1,1 +1,1 @@
-# Doryu
+# InfiWallet frontend
